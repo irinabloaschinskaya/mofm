@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="getN()">
+
+    <center>
+        Вопрос:
+        <pre id = "question"></pre>
+
+        <hr>
+        <br>
+        <button type="button" name="button" onclick="next(-1)">← Назад</button>
+        <button type="button" name="button" onclick="next(1)">Далее →</button>
+        <br>
+        <button type="button" name="button">Посмотреть ответ</button>
+        <hr>
+        <br>
+        <br>
+        <pre></pre>
+    </center>
+
+
+    <!-- FIREBASE CONFIG  -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    <script src="db_init.js"></script>
+    <script src="db_connect.js"></script>
+
+    <script src="check_theory_actions.js"></script>
+  </body>
+</html>
