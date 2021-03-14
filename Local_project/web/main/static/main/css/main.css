@@ -1,0 +1,55 @@
+body {
+    background: #444546;
+}
+aside {
+    float: left;
+    background: #212529;
+    width: 20%;
+    padding: 2%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #606367;
+}
+
+aside h3 {
+    margin-top: 25px;
+    font-size: 28px;
+}
+
+aside ul {list-style: none}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 15px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover {
+    color: #eb5959;
+    text_decoration: none;
+    transform: scale(1.07);
+}
+
+main .home {
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%
+}
+
+main .home h1 {font-size: 50px;}
+
+main .home p {
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.alert-warning{
+    float: center;
+    clear: both;
+    wight: 350px;
+    margin: 70px 37%;
+    text-align: center;
+}

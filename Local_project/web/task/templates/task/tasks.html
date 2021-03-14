@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Тесты
+{% endblock %}
+
+{% block content %}
+    <div class="home">
+        <h1>Доступные тесты</h1>
+        {% if tests %}
+            {% for el in tests%}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Нет тестов</p>
+        {% endif %}
+    </div>
+{% endblock %}
