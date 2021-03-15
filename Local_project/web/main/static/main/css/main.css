@@ -53,3 +53,33 @@ main .home p {
     margin: 70px 37%;
     text-align: center;
 }
+
+.alert-warning h4 {
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+form {
+    margin-left: 30%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+textarea {
+    resize: none;
+}
+
+.theory h2{
+    text-align: left;
+    max-width: 80%;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.theory div{
+    text-align: left;
+    max-width: 80%;
+    margin-left: 50px;
+    margin-top: 15px;
+}

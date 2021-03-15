@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
+from .forms import taskForm
+from django.views.generic import DetailView
 
 
 def tasks(request):
@@ -7,5 +9,25 @@ def tasks(request):
     return render(request, 'task/tasks.html', {'tests': tests})
 
 
+class TasksDetailView(DetailView):
+    model = task
+    template_name = 'task/detailview.html'
+    context_object_name = 'task'
+
+
 def create(request):
-    return render(request, 'task/create.html')
+    error = ''
+    if request.method == 'POST':
+        form = taskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        else:
+            error = 'Форма была неверной'
+
+    form = taskForm()
+    data = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'task/create.html', data)

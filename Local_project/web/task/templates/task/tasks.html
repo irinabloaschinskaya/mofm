@@ -11,6 +11,9 @@
             {% for el in tests%}
                 <div class="alert alert-warning">
                     <h3>{{ el.title }}</h3>
+                    <h4>Темы: {{ el.themes }}</h4>
+                    <br>
+                    <a href="{% url 'task-detail' el.id %}" class="btn btn-warning"> Пройти тест </a>
                 </div>
             {% endfor %}
         {% else %}
