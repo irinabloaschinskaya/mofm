@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    {{ task.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="home theory">
+        <h1>{{ task.title }}</h1><br>
+        <button class="btn btn-warning">Проверить определения</button><br>
+        <h2><strong>Теория</strong></h2><br>
+        <div>{{ task.theory }}</div>
+    </div>
+{% endblock %}
