@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Добавление теста
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'task-detail' task.id %}" class="btn btn-warning btn-exit"> К теории </a>
+    
+    <div class="home">
+        {% for el in definitions %}
+            {{ a }}
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -9,6 +9,12 @@ def tasks(request):
     return render(request, 'task/tasks.html', {'tests': tests})
 
 
+class DefinitionsView(DetailView):
+    model = task
+    template_name = 'task/definitions.html'
+    context_object_name = 'task'
+
+
 class TasksDetailView(DetailView):
     model = task
     template_name = 'task/detailview.html'

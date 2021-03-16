@@ -7,7 +7,7 @@
 {% block content %}
     <div class="home theory">
         <h1>{{ task.title }}</h1><br>
-        <button class="btn btn-warning">Проверить определения</button><br>
+        <a href="{% url 'task-detail2' task.id %}" class="btn btn-warning"> Проверить определения </a><br>
         <h2><strong>Теория</strong></h2><br>
         <div>{{ task.theory }}</div>
     </div>
