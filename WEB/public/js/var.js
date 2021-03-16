@@ -1,0 +1,1 @@
+let mPath = sessionStorage.getItem('path');
