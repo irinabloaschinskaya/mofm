@@ -1,15 +1,100 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-    Добавление теста
+    Проверка определений
 {% endblock %}
 
 {% block content %}
     <a href="{% url 'task-detail' task.id %}" class="btn btn-warning btn-exit"> К теории </a>
-    
     <div class="home">
-        {% for el in definitions %}
-            {{ a }}
-        {% endfor %}
+        <button type="button" class="btn-lg btn btn-primary" onclick="begin()" id="start_test">Начать</button>
+        <br>
+        <br>
+        <br>
+        <h2>Вопрос:</h2>
+        <h4 class="question" id = "question"></h4>
+        <hr>
+        <br>
+        <button type="button" class="btn btn-warning btn-sm" name="button" onclick="next(-2)">← Назад</button>
+        &nbsp;
+        <button type="button" class="btn btn-warning btn-sm" name="button" onclick="next(2)">Далее →</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-success" name="button" onclick="answer_pressed()" id="text_button" > Показать ответ </button>
+        <hr>
+        <br>
+        <br>
+        <div class="definition" id="answer"></div>
+        <script>
+            let textButton = document.getElementById("text_button");
+            let question = document.getElementById("question");
+            let answer = document.getElementById("answer");
+            let start = document.getElementById("start_test");
+            let answer_hide = true;
+            let started = false;
+            let i = 0;
+            let k = [];
+            let n;
+            let test = '{{ task.definitions|safe|linebreaks }}';
+
+
+            function begin(){
+                started = true;
+                start_test.remove();
+                let g = 3;
+                let h = 3;
+                while(test[h] != undefined){
+                    if (test[h] == '<' && test[h + 1] == 'b' && test[h + 2] == 'r' && test[h + 3] == '>'){
+                        k.push(test.slice(g, h));
+                        g = h + 4;
+                        h += 3;
+                    }
+                    h++;
+                }
+                k.push(test.slice(g, h));
+                n = k.length;
+                k[n - 1] = k[n - 1].slice(0, -4);
+                if (n % 2 == 1){
+                    n++;
+                }
+                question.innerHTML = output(k[i]);
+            }
+
+            function answer_pressed(){
+                if (started){
+                    if (answer_hide){
+                        textButton.innerHTML = 'Скрыть ответ';
+                        answer_hide = false;
+                        answer.innerHTML = output(k[i + 1]);
+                    }
+                    else{
+                        textButton.innerHTML = 'Показать ответ';
+                        answer_hide = true;
+                        answer.innerHTML = '';
+                    }
+                }
+            }
+
+
+            function next(a){
+                if (started){
+                    i = (i + a + n) % n;
+                    question.innerHTML = output(k[i]);
+                    answer.innerHTML = '';
+                    textButton.innerHTML = 'Показать ответ';
+                    answer_hide = true;
+                }
+            }
+
+
+            function output(a){
+                if (a != undefined && a != ' '){
+                    return a;
+                }
+                else{
+                    return 'Пусто';
+                }
+            }
+        </script>
     </div>
 {% endblock %}

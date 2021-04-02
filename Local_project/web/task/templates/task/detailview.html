@@ -9,6 +9,10 @@
         <h1>{{ task.title }}</h1><br>
         <a href="{% url 'task-detail2' task.id %}" class="btn btn-warning"> Проверить определения </a><br>
         <h2><strong>Теория</strong></h2><br>
-        <div>{{ task.theory }}</div>
+        {% if task.theory != '' %}
+            <div>{{ task.theory }}</div>
+        {% else %}
+            <h4>Теории нет</h4>
+        {%endif%}
     </div>
 {% endblock %}

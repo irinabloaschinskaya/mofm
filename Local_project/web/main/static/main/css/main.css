@@ -39,11 +39,32 @@ main .home {
     width: 75%
 }
 
+main .home2 {
+    float: left;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    width: 75%
+}
+
+main .home2 h1 {font-size: 50px;}
+
 main .home h1 {font-size: 50px;}
 
 main .home p {
     margin: 20px auto;
     max-width: 500px;
+}
+
+main .home h4 {
+    margin: auto;
+    max-width: 800px;
+}
+
+.definition {
+    font-size: 22px;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .alert-warning{
