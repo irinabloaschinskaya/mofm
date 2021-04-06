@@ -91,16 +91,13 @@ textarea {
     resize: none;
 }
 
-.theory h2{
-    text-align: left;
-    max-width: 80%;
-    margin-left: 20px;
-    margin-top: 30px;
+main .home h2{
+    margin: 30px auto;
+    max-width: 500px;
 }
 
 .theory div{
     text-align: left;
-    max-width: 80%;
     margin-left: 50px;
     margin-top: 15px;
 }
