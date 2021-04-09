@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    <div class="home theory">
+    <div class="home">
         <h1>{{ task.title }}</h1><br>
         <a href="{% url 'task-detail2' task.id %}" class="btn btn-warning"> Проверить определения </a><br>
         <h2><strong>Теория</strong></h2><br>
+    </div>
+    <div class="theory">
         {% if task.theory != '' %}
-            <div>{{ task.theory }}</div>
+            <div>{{ task.theory|safe|linebreaks }}</div>
         {% else %}
             <h4>Теории нет</h4>
         {%endif%}
