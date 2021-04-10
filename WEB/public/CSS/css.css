@@ -1,0 +1,98 @@
+body{
+    background-image : url(Фон.jpg)
+}
+
+a{
+    color:black;
+    font-size:1000%;
+}
+
+input{
+    height : 100px;
+    width : 800px;
+    font-size:300%
+}
+
+.zv{
+    height : 100px;
+    width : 800px;
+    font-size:300%
+}
+
+#nazad{
+    height : 150px;
+    width : 200px;
+    font-size : 50%;
+}
+
+.class{
+    height : 60px;
+    width : 60px;
+    font-size:100%
+}
+
+#sochranit{
+    height : 100px;
+    width : 800px;
+    font-size : 35%;
+}
+
+#vopros{
+    font-size : 1000%;
+}
+
+.vn{
+    height : 150px;
+    width : 400px;
+    font-size : 300%;
+}
+
+#text_button{
+    height : 50px;
+    width : 800px;
+    font-size:600%
+}
+
+#answer{
+    font-size:750%
+}
+
+#answer_box{
+    max-width:800px;
+}
+
+#question{
+    font-size:500%
+}
+
+#predmet{
+    font-size:1000%
+}
+
+#vf{
+    height : 200px;
+    width : 800px;
+    font-size:100%
+}
+
+.vp{
+    height : 200px;
+    width : 800px;
+    font-size:50%
+}
+
+#theory{
+    font-size:300%
+}
+
+#check_theory{
+    height : 150px;
+    width : 800px;
+    font-size:50%
+}
+
+.vpt{
+    height : 300px;
+    width : 800px;
+    font-size:50%
+}

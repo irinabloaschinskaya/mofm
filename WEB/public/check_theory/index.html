@@ -3,24 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="../CSS/css.css" rel="stylesheet" type="text/css"/>
   </head>
   <body onload="getN()">
-
+    <a href="../.."><button id="nazad" type="button" name="button">←</button></a>
     <center>
-        Вопрос:
-        <pre id = "question"></pre>
+        <center id = "vopros">Вопрос:</center>
+        <div class="answer_box">
+            <pre id = "question" ></pre>
+        </div>
+
 
         <hr>
         <br>
-        <button type="button" name="button" onclick="next(-1)">← Назад</button>
-        <button type="button" name="button" onclick="next(1)">Далее →</button>
+        <button class = "vn" type="button" name="button" onclick="next(-1)">← Назад</button>
+        <button class = "vn" type="button" name="button" onclick="next(1)">Далее →</button>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <br>
         <button type="button" name="button" onclick="showAnswer()"> <pre id="text_button" >Показать ответ</pre> </button>
         <hr>
         <br>
         <br>
-        <pre id="answer"></pre>
+        <div class="answer_box">
+            <pre id="answer"></pre>
+        </div>
+
     </center>
 
 
