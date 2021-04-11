@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Добавление теста
+{% endblock %}
+
+{% block content %}
+    <div class="home2">
+        <h1>Добавление теста</h1>
+        <div class="definition">Вводит определиния стоит таким образом: термин/вопрос, определение/ответ(на следующей строке), термин/вопрос(на следующей строке), определение/ответ(на следующей строке) и т.д.</div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.themes }}<br>
+            {{ form.definitions }}<br>
+            {{ form.theory }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить тест</button>
+        </form>
+    </div>
+{% endblock %}

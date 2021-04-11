@@ -1,0 +1,111 @@
+body {
+    background: #444546;
+}
+aside {
+    float: left;
+    background: #212529;
+    width: 20%;
+    padding: 2%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #606367;
+}
+
+aside h3 {
+    margin-top: 25px;
+    font-size: 28px;
+}
+
+aside ul {list-style: none}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 15px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover {
+    color: #eb5959;
+    text_decoration: none;
+    transform: scale(1.07);
+}
+
+main .home {
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .home2 {
+    float: left;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    width: 75%;
+}
+
+main .home2 h1 {font-size: 50px;}
+
+main .home h1 {font-size: 50px;}
+
+main .home p {
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+main .home h4 {
+    margin: auto;
+    max-width: 800px;
+}
+
+.definition {
+    font-size: 22px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.alert-warning{
+    float: center;
+    clear: both;
+    wight: 350px;
+    margin: 70px 37%;
+    text-align: center;
+}
+
+.alert-warning h4 {
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+form {
+    margin-left: 30%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+textarea {
+    resize: none;
+}
+
+main .home h2{
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+main .theory {
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: left;
+    max-width: 75%;
+}
+
+.btn-exit{
+    margin-top: 15px;
+    margin-left: 10px;
+}

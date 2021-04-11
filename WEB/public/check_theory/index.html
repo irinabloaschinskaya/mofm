@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../CSS/css.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body onload="getN()">
+    <a href="../.."><button id="nazad" type="button" name="button">←</button></a>
+    <center>
+        <center id = "vopros">Вопрос:</center>
+        <div class="answer_box">
+            <pre id = "question" ></pre>
+        </div>
+
+
+        <hr>
+        <br>
+        <button class = "vn" type="button" name="button" onclick="next(-1)">← Назад</button>
+        <button class = "vn" type="button" name="button" onclick="next(1)">Далее →</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button type="button" name="button" onclick="showAnswer()"> <pre id="text_button" >Показать ответ</pre> </button>
+        <hr>
+        <br>
+        <br>
+        <div class="answer_box">
+            <p id="answer"></p>
+        </div>
+
+    </center>
+
+
+    <!-- FIREBASE CONFIG  -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    <script src="../js/db_init.js"></script>
+    <script src="../js/db_connect.js"></script>
+
+    <script src="../js/var.js"></script>
+    <script src="../js/check_theory_actions.js"></script>
+
+  </body>
+</html>
